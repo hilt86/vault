@@ -10,9 +10,11 @@ storage "postgresql" {
 }
 
 listener "tcp" {
- address = "127.0.0.1:8080"
+ address = "0.0.0.0:8080"
  tls_disable = 1
 }
+
+ui = true 
 
 EOF
 
