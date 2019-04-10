@@ -10,7 +10,7 @@ storage "postgresql" {
 }
 
 listener "tcp" {
- address = "127.0.0.1:$PORT"
+ address = "0.0.0.0:$PORT"
  tls_disable = 1
 }
 
