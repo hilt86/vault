@@ -26,4 +26,3 @@ vault read secret/hello
 #### Useful Links
 - [docs](https://www.vaultproject.io/docs/index.html)
 - [api docs](https://www.vaultproject.io/api/index.html)
-- [use cases](https://sreeninet.wordpress.com/2016/10/01/vault-use-cases/)
