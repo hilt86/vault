@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 readonly PORT=${PORT:?}
 
 if [[ -z ${VAULT_UNSEAL_KEY+x} ]]; then
