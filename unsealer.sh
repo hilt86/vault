@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 readonly PORT=${PORT:?}
 
 if [[ -z ${VAULT_UNSEAL_KEY+x} ]]; then
@@ -22,7 +20,7 @@ while true
 do
   STATUS=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:$PORT)
   echo "status = ${STATUS}"
-  if [ ${STATUS} -eq 404 ]; then
+  if [ ${STATUS} -eq 404 ] || [ ${STATUS} -eq 307 ]; then
     echo "listener is up"
 	curl -X PUT -d "$(generate_post_data)" http://127.0.0.1:${PORT:?}/v1/sys/unseal
 	echo "done unsealing"
