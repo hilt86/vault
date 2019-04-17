@@ -18,7 +18,7 @@ FIRST=1
 
 while true
 do
-  STATUS=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080)
+  STATUS=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:$PORT)
   echo "status = ${STATUS}"
   if [ ${STATUS} -eq 404 ]; then
     echo "listener is up"
