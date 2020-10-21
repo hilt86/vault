@@ -26,3 +26,4 @@ vault read secret/hello
 #### Useful Links
 - [docs](https://www.vaultproject.io/docs/index.html)
 - [api docs](https://www.vaultproject.io/api/index.html)
+- [heroku buildpacks](https://devcenter.heroku.com/articles/buildpacks)
